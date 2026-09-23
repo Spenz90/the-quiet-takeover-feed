@@ -38,6 +38,7 @@ ATOM_NS = "http://www.w3.org/2005/Atom"
 AUTHOR = "Milo and Nadia"
 OWNER_NAME = "Spenz"
 OWNER_EMAIL = "spencererskine2009@gmail.com"
+CATEGORY = "Technology"  # Apple Podcasts requires itunes:category; Spotify/YouTube don't
 
 # Keep the original prefixes on re-serialization instead of ns0:/ns1:.
 ET.register_namespace("itunes", ITUNES_NS)
@@ -59,7 +60,8 @@ def inject_tags(xml_bytes: bytes) -> bytes:
         raise RuntimeError("no <channel> element in official feed")
 
     # Idempotency: drop any previously injected tags first.
-    for tag in (f"{{{ITUNES_NS}}}author", f"{{{ITUNES_NS}}}owner"):
+    for tag in (f"{{{ITUNES_NS}}}author", f"{{{ITUNES_NS}}}owner",
+                f"{{{ITUNES_NS}}}category"):
         for el in channel.findall(tag):
             channel.remove(el)
 
@@ -70,6 +72,8 @@ def inject_tags(xml_bytes: bytes) -> bytes:
     name_el.text = OWNER_NAME
     email_el = ET.SubElement(owner_el, f"{{{ITUNES_NS}}}email")
     email_el.text = OWNER_EMAIL
+    category_el = ET.Element(f"{{{ITUNES_NS}}}category")
+    category_el.set("text", CATEGORY)
 
     # Conventional placement: right after <title>.
     children = list(channel)
@@ -78,6 +82,7 @@ def inject_tags(xml_bytes: bytes) -> bytes:
     except StopIteration:
         title_idx = -1
     channel.insert(title_idx + 1, owner_el)
+    channel.insert(title_idx + 1, category_el)
     channel.insert(title_idx + 1, author_el)
 
     return ET.tostring(root, encoding="utf-8", xml_declaration=True)
@@ -106,6 +111,9 @@ def validate(xml_bytes: bytes) -> list:
             problems.append("itunes:owner/itunes:email missing or wrong")
         if name is None or (name.text or "").strip() != OWNER_NAME:
             problems.append("itunes:owner/itunes:name missing or wrong")
+    cat = channel.find(f"{{{ITUNES_NS}}}category")
+    if cat is None or cat.get("text") != CATEGORY:
+        problems.append("itunes:category missing or wrong")
     items = channel.findall("item")
     if not items:
         problems.append("no <item> episodes found")

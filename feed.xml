@@ -2,7 +2,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 <channel>
   <title>The Quiet Takeover</title>
-  <itunes:author>Milo and Nadia</itunes:author><itunes:owner><itunes:name>Spenz</itunes:name><itunes:email>spencererskine2009@gmail.com</itunes:email></itunes:owner><description>A daily briefing on AI that does things. Milo and Nadia track agents, models, and robots: what changed today and why it matters.
+  <itunes:author>Milo and Nadia</itunes:author><itunes:category text="Technology" /><itunes:owner><itunes:name>Spenz</itunes:name><itunes:email>spencererskine2009@gmail.com</itunes:email></itunes:owner><description>A daily briefing on AI that does things. Milo and Nadia track agents, models, and robots: what changed today and why it matters.
 
 AI Generated</description>
   <language>en</language>
