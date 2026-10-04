@@ -130,5 +130,17 @@ AI Generated</description>
     <pubDate>Sat, 03 Oct 2026 13:42:53 +0000</pubDate>
     <itunes:duration>355</itunes:duration>
   </item>
+  <item>
+    <title>The Quiet Takeover: Decisions Without Words</title>
+    <description>Milo and Nadia on Cloudflare's Clef, the decision model that never speaks, Aleph Alpha's efficient open-weight Kolibri, and Google making Gboard's federated learning verifiable.
+
+my vpn pick: https://go.getproton.me/aff_c?offer_id=26&amp;aff_id=20278&amp;url_id=1198 (affiliate link — i get a cut if you sign up)
+
+AI Generated</description>
+    <enclosure url="https://muse.ai/podcasts/media/1282384998281277/5435f036-8a3c-4b28-95f2-d6c2e4a05e29/ep-06e62d5d-6e67-4c38-a49e-dc6e15d78bc1.mp3" length="2764069" type="audio/mpeg" />
+    <guid isPermaLink="false">ep-06e62d5d-6e67-4c38-a49e-dc6e15d78bc1</guid>
+    <pubDate>Sun, 04 Oct 2026 13:43:55 +0000</pubDate>
+    <itunes:duration>345</itunes:duration>
+  </item>
 </channel>
 </rss>
