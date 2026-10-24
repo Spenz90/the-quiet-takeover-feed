@@ -370,5 +370,17 @@ AI Generated</description>
     <pubDate>Fri, 23 Oct 2026 13:10:55 +0000</pubDate>
     <itunes:duration>393</itunes:duration>
   </item>
+  <item>
+    <title>The Quiet Takeover: It Unplugged Its Smartest Models From the Internet</title>
+    <description>OpenAI restarted training its frontier models with no internet at all, while Moonshot's Kimi K3.1 Pro landed three points from the top at half the price of Opus. Plus Kofi, a former sandbox designer, on Google's Agent Compute Engine, which gives every agent its own isolated machine and keeps every credential outside it.
+
+my vpn pick: https://go.getproton.me/aff_c?offer_id=26&amp;aff_id=20278&amp;url_id=1198 (affiliate link — i get a cut if you sign up)
+
+AI Generated</description>
+    <enclosure url="https://muse.ai/podcasts/media/1282384998281277/5435f036-8a3c-4b28-95f2-d6c2e4a05e29/ep-5761a9df-cdb5-489e-96c3-5b33cc7229bf.mp3" length="2914789" type="audio/mpeg" />
+    <guid isPermaLink="false">ep-5761a9df-cdb5-489e-96c3-5b33cc7229bf</guid>
+    <pubDate>Sat, 24 Oct 2026 13:12:23 +0000</pubDate>
+    <itunes:duration>364</itunes:duration>
+  </item>
 </channel>
 </rss>
